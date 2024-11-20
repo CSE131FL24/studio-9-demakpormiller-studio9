@@ -9,11 +9,10 @@ public class Polynomial {
 	/**
 	 * Constructs a Polynomial with no terms yet.
 	 */
-	public Polynomial() {
-		//FIXME
+	public Polynomial(LinkedList<Double> list) {
+		this.list = list;
 	}
 
-	
 	/**
 	 * 
 	 * @param coeff
@@ -21,6 +20,7 @@ public class Polynomial {
 	 */
 	public void addTerm(double coeff) {
 		//FIXME
+		list.add(coeff);
 	}
 	
 	/*
@@ -29,7 +29,13 @@ public class Polynomial {
 	 * Cx^N + Cx^N-1 + ... + Cx + C
 	 */
 	public String toString() {
-		return ""; //FIXME
+		String listResult = null;
+		int highestPower = this.list.size() - 1;
+		for(int i = highestPower; i == 0; i--) {
+			listResult += this.list.get(i) + "x" 
+		}
+	//FIXME
+		return listResult;
 	}
 	
 	/**
